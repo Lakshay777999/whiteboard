@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+ <div class="tools">
+     <div class="toolbox add-animation">
+         <div class="tool active-tool" id="pencil">
+             <img src="./resources-master/NewIcons/Black_Pencil.svg"/>
+             <div class="tool-options hide " id=pencil-options>
+                 <input type="range" id="pencilsize" min="1" max="45"/>
+                 <div class="pencil-colors">
+                     <div class="red"></div>
+                     <div class="blue"></div>
+                     <div class="green"></div>
+                     <div class="black"></div>
+                 </div>
+             </div>
+         </div>
+         <div class="tool" id="eraser">
+            <img src="./resources-master/NewIcons/Eraser.svg"/>
+            <div class="tool-options hide" id="eraser-option">
+                <input type="range" id="erasersize" min="1" max="55"/>
+            </div>
+        </div>
+        <div class="tool" id="stickynote">
+            <img src="./resources-master/NewIcons/StickyNote.svg"/>
+        </div>
+        <div class="tool" id="photo">
+            <img src="./resources-master/NewIcons/Photo.svg"/>
+            <input type="file" id="photo-upload" style="display: none;"/>
+        </div>
+        <div class="tool">
+            <img src="./resources-master/NewIcons/Undo.svg" id="undo"/>
+        </div>
+        <div class="tool" id="redo">
+            <img src="./resources-master/NewIcons/Redo.svg"/>
+        </div>
+        <div class="tool" id="Download">
+            <img src="./resources-master/NewIcons/Download.svg"/>
+        </div>
+     </div>
+ </div>
+ <div class="content">
+     <canvas id='canvas'>
+        
+     </canvas>
+ </div>
+
+ <div id="root"></div>
+ 
+</body>
+<script src="https://cdn.socket.io/4.3.2/socket.io.min.js" integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous"></script>
+<script>
+    const socket=io.connect("https://whiteboard-server-api.herokuapp.com/");
+</script>
+<script src="./script.js"></script>
+<script src="./tools.js"></script>
+<script src="./sticky.js"></script>
+<script src="./img.js"></script>
+<script src="./createsticky.js"></script>
+<script src="./socket.js"></script>
+</html>

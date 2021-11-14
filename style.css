@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+}
+body,html
+{
+    margin: 0px;
+}
+.tools
+{
+    display: flex;
+    /* background-color: aliceblue; */
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+}
+/* .content
+{
+height: calc(100vh-100px);
+} */
+/* #canvas
+{
+    height: 100%;
+    width: 100%;
+} */
+.toolbox
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    align-items: center;
+    
+    border-radius: 65px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.tool{
+height: 50px;
+}
+.tool img
+{
+    
+    height: 100%;
+    /* justify-content: center; */
+    display: flex;
+     margin: auto;
+  
+}
+
+.tool-options
+{
+    
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    background: #79a9d4;
+    border-radius: 10px;
+    left: -1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    
+}
+
+.pencil-colors
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.red
+{
+    height: 20px;
+    width: 20px;
+    background: red;
+    border-radius: 5px;
+}
+.blue
+{
+    height: 20px;
+    width: 20px;
+    background:blue;
+    border-radius: 5px;
+}
+.green
+{
+    height: 20px;
+    width: 20px;
+    background: green;
+    border-radius: 5px;
+}
+.black
+{
+    height: 20px;
+    width: 20px;
+    background:black;
+    border-radius: 5px;
+}
+.hide
+{
+    display: none;
+}
+.active-tool
+{
+    background: darkgrey;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.sticky
+{
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    width: 261px;
+    border: 1px solid grey
+}
+.sticky-header
+{
+    height: 20px;
+    background: grey;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.minimize
+{
+    height: 20px;
+    background: yellow;
+    width: 20px;
+    border-radius: 10px;
+}
+.close
+{
+    height: 20px;
+    background:red;
+    width: 20px;
+    border-radius: 10px;
+}
+.sticky-content
+{
+    width: 100%;
+}
+.photo
+{
+    object-fit: contain;
+    width: 100%;
+}
+@keyframes tool {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+
+    }
+    25%{
+        transform: scale(0.25);
+    }
+    50%
+    {
+        transform: scale(0.5);
+         opacity: 0.75;
+    }
+    75%{
+        transform: scale(0.75);
+    }
+   
+    100%{
+        transform: scale(1);
+         opacity: 1;
+    }
+
+    
+}
+.add-animation
+{
+    animation-name: tool;
+    animation-duration: 0.5s;
+}
